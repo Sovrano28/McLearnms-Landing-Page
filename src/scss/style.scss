@@ -1,1 +1,25 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+html, body {
+  font-family: "Droid Sans", sans-serif;
+}
+
+header .container {
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+
+.nav-brand h1 {
+  font-size: 22px;
+  font-weight: 700;
+  font-style: bold;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  
+}
