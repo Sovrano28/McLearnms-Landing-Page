@@ -9,20 +9,26 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <header class="fixed-top">
-      <div class="container d-flex justify-content-md-between">
-        <a class="navbar-brand d-flex" href="#">
+    <header class="fixed-top navbar navbar-expand-lg">
+      <div class="container d-flex justify-content-lg-between">
+        <a class="navbar-brand d-flex m-0" href="#">
           <img class="" src="./assets/imgs/favicon.svg" alt="McLearnms">
-          <h1 class="ps-md-5">McLearnms</h1>
+          <h1 class="m-0 ps-3 ps-lg-5 fs-4 text-project-blue">McLearnms</h1>
         </a>
-        <nav class="nav navbar-collapse-md list-unstyled">
-          <ul class="d-flex align-items-center">
-            <li><a href="" class="nav-link scrollto active">Features</a></li>
-            <li><a href="" class="nav-link scrollto">Pricing</a></li>
-            <li><a href="" class="nav-link scrollto">Support</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile-nav">
+          <ul class="nabar-nav py-7 py-lg-0 d-flex flex-column flex-lg-row">
+            <li class="nav-item dropdown">
+              <a href="#features" class="nav-link dropdown-toggle active">Features</a>
+              <ul></ul>
+            </li>
+            <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
           </ul>
-        </nav>
-        <button class="btn btn-primary" type="button">Get Started</button>
+        </div>
+        <button id="btn-get-started" class="btn bg-project-blue text-white d-none d-lg-block" type="button">Get Started</button>
       </div>
     </header>
     

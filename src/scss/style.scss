@@ -1,12 +1,29 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+$primary-colour: #0041AA;
+$dark-grey: #060C3C;
+
 html, body {
   font-family: "Droid Sans", sans-serif;
 }
 
-header .container {
-  padding-top: 36px;
-  padding-bottom: 20px;
+header {
+  height: 100px;
+  background: linear-gradient(111.49deg, rgba(255, 255, 255, 0.4) -8.95%, rgba(212, 223, 241, 0.1) 114%);
+  backdrop-filter: blur(50px);
+
+  .container {
+    padding-top: 36px;
+    padding-bottom: 20px;
+  }
+}
+
+.text-project-blue {
+  color: $primary-colour;
+}
+
+.bg-project-blue {
+  background: $primary-colour;
 }
 
 .nav-brand h1 {
@@ -15,11 +32,47 @@ header .container {
   font-style: bold;
 }
 
-ul li {
-  list-style: none;
+.navbar-toggler {
+  border: none;
+  transition: border 300ms;
+
+  &:focus {
+    box-shadow: none;
+    border: 2px solid $dark-grey;
+  }
 }
 
-ul li a {
-  text-decoration: none;
-  
+ul {
+
+  padding: 0;
+  margin: 0 auto;
+  row-gap: 30px;
+
+  li {
+    list-style: none;
+
+    &:nth-child(2) {
+      margin: 0;
+      
+      @media (min-width: 992px) {
+        margin: 0 56px;
+      }
+    }
+
+    a.nav-link {
+      color: $dark-grey;
+      font-size: 18px;
+      line-height: 125%;
+
+      &:hover, &:focus {
+        color: $dark-grey;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+#btn-get-started {
+  width: 190px;
+  height: 44px;
 }
