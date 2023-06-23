@@ -6,18 +6,22 @@
     <title>McLearnms</title>
     <link rel="icon" href="./assets/imgs/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://use.typekit.net/lvk8xol.css">
+    <link href="//db.onlinewebfonts.com/c/a78cfad3beb089a6ce86d4e280fa270b?family=Calibri" rel="stylesheet" type="text/css"/>
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <header class="fixed-top navbar navbar-expand-lg">
-      <div class="container d-flex justify-content-lg-between">
+    <header class="position-relative navbar navbar-expand-lg">
+      <div class="container d-flex justify-content-lg-between py-5">
+
         <a class="navbar-brand d-flex m-0" href="#">
           <img class="" src="./assets/imgs/favicon.svg" alt="McLearnms">
-          <h1 class="m-0 ps-3 ps-lg-5 fs-4 text-project-blue">McLearnms</h1>
+          <h1 class="m-0 ps-3 ps-lg-5 text-project-blue brand-name d-flex align-items-center">McLearnms</h1>
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="mobile-nav">
           <ul class="nabar-nav py-7 py-lg-0 d-flex flex-column flex-lg-row">
             <li class="nav-item dropdown">
@@ -28,9 +32,71 @@
             <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
           </ul>
         </div>
-        <button id="btn-get-started" class="btn bg-project-blue text-white d-none d-lg-block" type="button">Get Started</button>
+
+        <button class="btn btn-cta bg-project-blue text-white d-none d-lg-block" type="button">Get Started</button>
       </div>
     </header>
+
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+     <div class="container">
+      <div class="row">
+
+        <div class="col-lg-7 d-flex align-items-center">
+          <div class="my-auto">
+            <h1 class="mb-0">Unlock an learning experience</h1>
+            <p class="mb-0">
+              The future of education is here, re-event traditional learning and gain access to seamless learning and management experience. The best eLearning solutions for institutions of all sizes. Everything you need in-one-place.
+            </p>
+            <div class="row align-items-center flex-nowrap px-3 my-8 mt-ls-16 mb-ls-18">
+
+              <button class="btn btn-cta bg-project-blue text-white" type="button">Get Started</button>
+
+              <div class="row flex-nowrap flex-shrink-1 align-items-center m-0 ms-14 p-0 see-action">
+
+                <img class="d-inline-block p-0" width="32px" height="32px" src="assets/imgs/little-play-btn.svg" alt="play-btn">
+                <span class="d-inline-block p-0">See in action</span>
+
+              </div>
+
+            </div>
+
+            <div class="row d-none d-lg-flex">
+              <div class="d-flex flex-column hero-stats">
+                <span>50+</span>
+                <span>Active Schools</span>
+              </div>
+              <div class="d-flex flex-column hero-stats">
+                <span>500+</span>
+                <span>Satisfied Lecturers</span>
+              </div>
+              <div class="d-flex flex-column hero-stats">
+                <span>1000+</span>
+                <span>Happy Students</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5"></div>
+
+        <div class="col row d-flex d-lg-none mt-8 px-0">
+          <div class="d-flex flex-column hero-stats">
+            <span>50+</span>
+            <span>Active Schools</span>
+          </div>
+          <div class="d-flex flex-column hero-stats">
+            <span>500+</span>
+            <span>Satisfied Lecturers</span>
+          </div>
+          <div class="d-flex flex-column hero-stats">
+            <span>1000+</span>
+            <span>Happy Students</span>
+          </div>
+        </div>
+      </div>
+     </div>
+    </section>
     
   </body>
 </html>

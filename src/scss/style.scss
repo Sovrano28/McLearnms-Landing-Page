@@ -2,20 +2,11 @@
 
 $primary-colour: #0041AA;
 $dark-grey: #060C3C;
+$neutral-90: #666D77;
+$neutral-80: #88919F;
 
 html, body {
   font-family: "Droid Sans", sans-serif;
-}
-
-header {
-  height: 100px;
-  background: linear-gradient(111.49deg, rgba(255, 255, 255, 0.4) -8.95%, rgba(212, 223, 241, 0.1) 114%);
-  backdrop-filter: blur(50px);
-
-  .container {
-    padding-top: 36px;
-    padding-bottom: 20px;
-  }
 }
 
 .text-project-blue {
@@ -26,10 +17,25 @@ header {
   background: $primary-colour;
 }
 
-.nav-brand h1 {
-  font-size: 22px;
+header, section {
+  overflow-x: hidden;
+}
+
+header {
+  // height: 100px;
+  background: linear-gradient(111.49deg, rgba(255, 255, 255, 0.4) -8.95%, rgba(212, 223, 241, 0.1) 114%);
+  backdrop-filter: blur(50px);
+}
+
+.brand-name {
+  font-size: 1rem;
   font-weight: 700;
   font-style: bold;
+  line-height: 125%;
+
+  @media (min-width: 992px) {
+    font-size: 1.375rem;
+  }
 }
 
 .navbar-toggler {
@@ -61,7 +67,7 @@ ul {
 
     a.nav-link {
       color: $dark-grey;
-      font-size: 18px;
+      font-size: 1.125rem;
       line-height: 125%;
 
       &:hover, &:focus {
@@ -72,7 +78,108 @@ ul {
   }
 }
 
-#btn-get-started {
-  width: 190px;
+.btn-cta {
   height: 44px;
+  max-width: 160px;
+  
+  @media (min-width: 992px) {
+    max-width: 190px;
+  }
+}
+
+#hero {
+  height: auto;
+  background-color: white;
+  background-image: none;
+
+  h1 { 
+
+    color: $dark-grey;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 140%;
+    margin-top: 40px;
+    
+      @media (min-width: 992px) {
+      font-size: 3.3125rem;
+      line-height: 66px;
+      margin-top: 0;
+    }
+  }
+  
+  p {
+    color: $dark-grey;
+    font-size: 1.125rem;
+    line-height: 160%;
+    margin-top: 24px;
+    
+    @media (min-width: 992px) {
+      font-size: 1.375rem;
+      line-height: 37px;
+      margin-top: 0;
+    }
+    
+  }
+
+  @media (min-width: 992px) {
+    height: 100vh;
+    background-image: url(../assets/imgs/desktop.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 70%;
+  }
+
+  [alt="play-btn"] {
+    width: 72px;
+    height: 72px;
+  }
+
+  .see-action {
+
+    span {
+      width: max-content;
+    }
+  }
+  
+  .hero-stats {
+    width: max-content;
+
+    span {
+      line-height: 125%;
+
+      &:nth-child(1) {
+        color: $neutral-90;
+        font-size: 1.375rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+
+      &:nth-child(2) {
+        color: $neutral-80;
+        font-family: "Calibri", sans-serif;
+        font-size: 0.875rem;
+
+        @media (min-width: 992px) {
+          &:nth-child(1) {
+            font-size: 2.125rem;
+            letter-spacing: 0.05em;
+          }
+          &:nth-child(2) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .col-lg-5 {
+    min-height: 55vh;
+    background-image: url(../assets/imgs/mobile-bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    
+    @media (min-width: 992px) {
+      background-image: none;
+    }
+  }
 }
