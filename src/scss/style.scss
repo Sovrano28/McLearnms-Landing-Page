@@ -8,7 +8,7 @@ $dark-grey: #060C3C;
 $black-shade: #000D22;
 
 html, body {
-  font-family: "Droid Sans", sans-serif;
+  font-family: "droid-sans", sans-serif;
 }
 
 .text-project-blue {
@@ -17,6 +17,14 @@ html, body {
 
 .bg-project-blue {
   background: $primary-colour;
+}
+
+h3 {
+  font-size: 1.375rem; //h5 size
+  
+  @media (min-width: 992px) {
+    font-size: 2.125rem;
+  }
 }
 
 header, section {
@@ -195,35 +203,36 @@ ul {
   }
 }
 
-#what-we-offer {
-  .intro {
-    font-weight: 700;
+.intro {
+  font-weight: 700;
+  
+  div {
+    color: $primary-colour;
     
-    div {
-      color: $primary-colour;
-      
-      span {
-        background-color: $neutral-10;
-        width: max-content;
-        font-size: 0.875rem;
-        font-family: "Calibri", sans-serif;
+    span {
+      background-color: $neutral-10;
+      width: max-content;
+      font-size: 0.875rem;
+      font-family: "Calibri", sans-serif;
 
-        @media (min-width: 992px) {
-          font-size: 1.625rem;
-        }
-      }
-    }
-    
-    h1 {
-      color: $dark-grey;
-      font-size: 1.6875rem;
-      line-height: 150%;
-      
       @media (min-width: 992px) {
-        font-size: 2.6875rem;
+        font-size: 1.625rem;
       }
     }
   }
+  
+  h1 {
+    color: $dark-grey;
+    font-size: 1.6875rem;
+    line-height: 150%;
+    
+    @media (min-width: 992px) {
+      font-size: 2.6875rem;
+    }
+  }
+}
+
+#what-we-offer {
   
   .service {
     line-height: 155%;
@@ -255,6 +264,36 @@ ul {
       @media (min-width: 1200px) {
         padding: 73px 90px;
       }
+    }
+  }
+}
+
+#who-and-who-benefits {
+
+  .services-rendered-to-people {
+    color: $dark-grey;
+
+    h3 {
+      line-height: 125%;
+    }
+
+    p {
+      font-size: 1rem;
+
+      @media (min-width: 992px) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .learn-more {
+    color: $black-shade;
+    font-family: "Calibri", sans-serif;
+    font-size: 1rem;
+    line-height: 125%;
+
+    @media (min-width: 992px) {
+      font-size: 1.125rem;
     }
   }
 }
