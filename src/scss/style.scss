@@ -247,9 +247,14 @@ ul {
       }
     }
 
-    .service-image img {
-      width: 65%;
-      object-fit: contain;
+    .service-image .d-flex {
+      width: 90%;
+      height: fit-content;
+      padding: 60px 60px;
+      background-color: $neutral-10;
+      @media (min-width: 1200px) {
+        padding: 73px 90px;
+      }
     }
   }
 }
