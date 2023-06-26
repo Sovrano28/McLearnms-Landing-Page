@@ -21,6 +21,7 @@ html, body {
 
 h3 {
   font-size: 1.375rem; //h5 size
+  font-weight: 700;
   
   @media (min-width: 992px) {
     font-size: 2.125rem;
@@ -89,8 +90,15 @@ ul {
 }
 
 .btn-cta {
-  height: 44px;
-  max-width: 160px;
+  max-width: max-content;
+  // height: 44px;
+  background-color: $primary-colour;
+  padding: 10px 30px;
+  color: white;
+  font-family: "droid-sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 125%;
 
   &:hover, &:focus {
     background-color: $primary-colour;
@@ -98,7 +106,8 @@ ul {
   }
   
   @media (min-width: 992px) {
-    max-width: 190px;
+    max-width: max-content;
+    font-size: 1rem;
   }
 }
 
@@ -214,7 +223,7 @@ ul {
       width: max-content;
       font-size: 0.875rem;
       font-family: "Calibri", sans-serif;
-
+      
       @media (min-width: 992px) {
         font-size: 1.625rem;
       }
@@ -222,6 +231,7 @@ ul {
   }
   
   h1 {
+    font-weight: 700;
     color: $dark-grey;
     font-size: 1.6875rem;
     line-height: 150%;
@@ -275,6 +285,7 @@ ul {
 
     h3 {
       line-height: 125%;
+      font-weight: 700;
     }
 
     p {
@@ -292,8 +303,27 @@ ul {
     font-size: 1rem;
     line-height: 125%;
 
+    // @media (min-width: 768px) and (max-width: 992px) {
+    //   // width: 75%;
+    //   justify-content: center;
+    // }
+
     @media (min-width: 992px) {
       font-size: 1.125rem;
+    }
+  }
+
+  .its-img .d-flex {
+    width: 85%;
+    
+    @media (min-width: 768px) and (max-width: 992px) {
+      width: 75%;
+    }
+  }
+
+  .btn-cta {
+    @media (min-width: 768px) and (max-width: 992px) {
+      min-width: 365px;
     }
   }
 }
