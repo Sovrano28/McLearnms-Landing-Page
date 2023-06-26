@@ -1,13 +1,11 @@
 const path = require('path')
-import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default {
   root: path.resolve(__dirname, 'src'),
   build: {
-    outDir: '../dist',
-    base: '/McLearnms-Landing-Page/',
+    outDir: '../'
   },
   server: {
     port: 8080
   }
-});
+};
