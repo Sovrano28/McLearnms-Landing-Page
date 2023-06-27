@@ -1,8 +1,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 $primary-colour: #0041AA;
-$newutal: #D4DFF1;
 $neutral-10: #F5F7FC;
+$neutral-50: #D4DFF1;
 $neutral-80: #88919F;
 $neutral-90: #666D77;
 $neutral-100: #44484F;
@@ -326,8 +326,40 @@ ul {
 }
 
 #testimonials {
+  overflow-y: hidden;
   background-color: $neutral-10;
   color: $black-shade;
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    background-color: $primary-colour;
+    opacity: 0.1;
+    width: 320px;
+    height: 160px;
+    border-radius: 320px;
+    filter: blur(100px);
+    
+    @media (min-width: 992px) {
+      width: 720px;
+      height: 360px;
+      border-radius: 720px;
+    }
+  }
+
+  &::before {
+    top: 0%;
+    left: -10%;
+    transform: rotate(145deg);
+  }
+  
+  &::after {
+    right: 10%;
+    bottom: -10%;
+    // transform: rotate(135deg);
+  }
+
+
 
   .testimonial-cards {
     background-color: white;
@@ -335,9 +367,9 @@ ul {
     font-family: "Calibri", sans-serif;
     line-height: 170%;
     border-radius: 8px;
-    border-right: 0.5px solid $newutal;
-    border-bottom: 0.5px solid $newutal;
-    border-left: 0.5px solid $newutal;
+    border-right: 0.5px solid $neutral-50;
+    border-bottom: 0.5px solid $neutral-50;
+    border-left: 0.5px solid $neutral-50;
     box-shadow: 0px 4px 6px -2px rgba(41, 76, 171, 0.05), 0px 12px 24px -4px rgba(41, 76, 171, 0.05);
     
     @media (min-width: 992px) {
@@ -352,13 +384,13 @@ ul {
 
     &:nth-child(1) {
       max-width: 80%;
-
+      
       &::before {
         content: "\“";
         position: absolute;
         top: -7%;
         left: -7%;
-        color: $newutal;
+        color: $neutral-50;
         font-size: 2rem;
         font-weight: 700;
         line-height: 125%;
@@ -374,6 +406,34 @@ ul {
       @media (min-width: 992px) {
         max-width: 500px;
       }
+    }
+  }
+  
+  .card-slide-btn {
+    img {
+      width: 16px;
+      height: 16px;
+
+      @media (min-width: 992px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    
+    .circle {
+      width: 6px;
+      height: 6px;
+      background-color: $neutral-50;
+      
+      &:nth-child(1) {
+        background-color: $primary-colour;
+      }
+      
+      @media (min-width: 992px) {
+        width: 8px;
+        height: 8px;
+      }
+
     }
   }
 }
