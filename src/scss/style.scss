@@ -1,9 +1,11 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 $primary-colour: #0041AA;
-$neutral-90: #666D77;
-$neutral-80: #88919F;
+$newutal: #D4DFF1;
 $neutral-10: #F5F7FC;
+$neutral-80: #88919F;
+$neutral-90: #666D77;
+$neutral-100: #44484F;
 $dark-grey: #060C3C;
 $black-shade: #000D22;
 
@@ -11,13 +13,7 @@ html, body {
   font-family: "droid-sans", sans-serif;
 }
 
-.text-project-blue {
-  color: $primary-colour;
-}
-
-.bg-project-blue {
-  background: $primary-colour;
-}
+p {margin: 0;}
 
 h3 {
   font-size: 1.375rem; //h5 size
@@ -91,7 +87,6 @@ ul {
 
 .btn-cta {
   max-width: max-content;
-  // height: 44px;
   background-color: $primary-colour;
   padding: 10px 30px;
   color: white;
@@ -102,6 +97,7 @@ ul {
 
   &:hover, &:focus {
     background-color: $primary-colour;
+    color: white;
     opacity: .8;
   }
   
@@ -279,10 +275,16 @@ ul {
 }
 
 #who-and-who-benefits {
+  background-image: none;
+
+  @media (min-width: 992px) {
+    background-image: url(../assets/imgs/other-hair.png);
+    background-repeat: no-repeat;
+  }
 
   .services-rendered-to-people {
     color: $dark-grey;
-
+    
     h3 {
       line-height: 125%;
       font-weight: 700;
@@ -303,11 +305,6 @@ ul {
     font-size: 1rem;
     line-height: 125%;
 
-    // @media (min-width: 768px) and (max-width: 992px) {
-    //   // width: 75%;
-    //   justify-content: center;
-    // }
-
     @media (min-width: 992px) {
       font-size: 1.125rem;
     }
@@ -324,6 +321,59 @@ ul {
   .btn-cta {
     @media (min-width: 768px) and (max-width: 992px) {
       min-width: 365px;
+    }
+  }
+}
+
+#testimonials {
+  background-color: $neutral-10;
+  color: $black-shade;
+
+  .testimonial-cards {
+    background-color: white;
+    font-size: 0.875rem;
+    font-family: "Calibri", sans-serif;
+    line-height: 170%;
+    border-radius: 8px;
+    border-right: 0.5px solid $newutal;
+    border-bottom: 0.5px solid $newutal;
+    border-left: 0.5px solid $newutal;
+    box-shadow: 0px 4px 6px -2px rgba(41, 76, 171, 0.05), 0px 12px 24px -4px rgba(41, 76, 171, 0.05);
+    
+    @media (min-width: 992px) {
+      font-size: 1.125rem;
+      font-family: "droid-sans", sans-serif;
+      max-width: 500px;
+      margin: 0 !important;
+    }
+
+    .name {color: $neutral-100;}
+    .detail {font-weight: 700;}
+
+    &:nth-child(1) {
+      max-width: 80%;
+
+      &::before {
+        content: "\“";
+        position: absolute;
+        top: -7%;
+        left: -7%;
+        color: $newutal;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 125%;
+        text-align: center;
+        
+        @media (min-width: 992px) {
+          top: -20%;
+          left: -10%;
+          font-size: 5.5rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        max-width: 500px;
+      }
     }
   }
 }
