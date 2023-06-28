@@ -13,7 +13,7 @@ html, body {
   font-family: "droid-sans", sans-serif;
 }
 
-p {margin: 0;}
+p, h5, h6 {margin: 0;}
 
 h3 {
   font-size: 1.375rem; //h5 size
@@ -536,4 +536,39 @@ ul {
 
 footer {
   background-color: $primary-colour;
+
+  h5 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 125%;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 160%;
+  }
+
+  .connect {
+    span {
+      font-size: 1rem;
+      line-height: 22px;
+    }
+  }
+
+  h6 {
+    color: $neutral-10;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 125%;
+  }
+
+  .list span {
+    font-family: "Calibri", sans-serif;
+    font-size: 1rem;
+    line-height: 26px;
+  }
+
+  #bottom-footer {
+    color: $neutral-50;
+  }
 }
