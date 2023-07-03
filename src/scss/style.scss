@@ -464,49 +464,49 @@ ul {
     background-position: right bottom;
   }
 
-  .questions {
-    margin-top: 32px;
+  // .questions {
+  //   margin-top: 32px;
     
-    @media (min-width: 992px) {
-      margin-top: 132px;
-    }
+  //   @media (min-width: 992px) {
+  //     margin-top: 132px;
+  //   }
 
-    .q-1 {
+  //   .q-1 {
 
-      img {
-        transform: rotate(180deg);
-      }
+  //     img {
+  //       transform: rotate(180deg);
+  //     }
 
-      > div {
-        background-color: $neutral-10;
-        border-radius: 24px;
-        width: max-content;
-      }
-    }
+  //     > div {
+  //       background-color: $neutral-10;
+  //       border-radius: 24px;
+  //       width: max-content;
+  //     }
+  //   }
 
-    p {
-      border-radius: 12px;
-      border: 1px solid $neutral-50;
-    }
+  //   p {
+  //     border-radius: 12px;
+  //     border: 1px solid $neutral-50;
+  //   }
 
-    .other-qs { 
-      background: url(../assets/imgs/ornament-mobile.svg) no-repeat center;
+  //   .other-qs { 
+  //     background: url(../assets/imgs/ornament-mobile.svg) no-repeat center;
       
-      @media (min-width: 992px) {
-        background: url(../assets/imgs/ornament-desktop.svg) no-repeat;
-        background-position: 10% 50%;
-      }
+  //     @media (min-width: 992px) {
+  //       background: url(../assets/imgs/ornament-desktop.svg) no-repeat;
+  //       background-position: 10% 50%;
+  //     }
 
-      img {
-        transform: rotate(270deg);
-      }
+  //     img {
+  //       transform: rotate(270deg);
+  //     }
 
-      :is(h5, img) {
-        cursor: pointer;
-      }
-    }
+  //     :is(h5, img) {
+  //       cursor: pointer;
+  //     }
+  //   }
 
-  }
+  // }
 
   span {
     color: $primary-colour;
@@ -516,6 +516,60 @@ ul {
     @media (min-width: 992px) {
       font-size: 1rem;
     }
+  }
+
+  .accordion {
+    border: none;
+    background: url(../assets/imgs/ornament-mobile.svg) no-repeat center;
+    
+    @media (min-width: 992px) {
+      background: url(../assets/imgs/ornament-desktop.svg) no-repeat;
+      background-position: 10% 50%;
+    }
+
+    .accordion-item {
+      border: none;
+
+      .accordion-button {
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 12px;
+        font-size: 1.25rem;
+
+        @media (min-width: 992px) {
+          gap: 16px;
+        }
+
+        &:focus {
+          border: none;
+        }
+
+        &::after {
+          margin: 0;
+        }
+  
+        &:not(.collapsed) {
+          background-color: $neutral-10;
+  
+          &::after {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+  
+      .accordion-body {
+      border-radius: 12px;
+      border: 1px solid #D4DFF1;
+      margin: 12px 0;
+      padding: 16px;
+      
+        @media (min-width: 992px) {
+          margin: 16px 0;
+          padding: 32px;
+        }
+      }
+    }
+
   }
   
   .part-b {
