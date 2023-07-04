@@ -442,6 +442,10 @@ header {
         left: -12%;
         font-size: 5.5rem;
       }
+
+      @media (min-width: 1200px) {
+        left: -10%;
+      }
     }
 
     &:is(.swiper-slide-active) {
