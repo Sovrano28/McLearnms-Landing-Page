@@ -183,13 +183,6 @@ header {
     width: 72px;
     height: 72px;
   }
-
-  // .see-action {
-
-  //   span {
-  //     width: max-content;
-  //   }
-  // }
   
   .hero-stats {
     width: max-content;
@@ -226,7 +219,7 @@ header {
     min-height: 55vh;
     background-image: url(../assets/imgs/hero-bg-mobile.png);
     background-repeat: no-repeat;
-    background-position: 50% 20%;
+    background-position: 45% 20%;
     
     @media (min-width: 992px) {
       background-image: none;
@@ -285,6 +278,20 @@ header {
 
       @media (min-width: 992px) {
         font-size: 1.125rem;
+      }
+    }
+
+    .the-cards {
+      border-radius: 8px;
+      border-right: 1px solid $neutral-50;
+      border-bottom: 1px solid $neutral-50;
+      border-left: 1px solid $neutral-50;
+      box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.05), 0px 12px 24px -4px rgba(16, 24, 40, 0.05);
+      transition: all 300ms ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+       box-shadow: 7px 4px 10px -2px rgba(16, 24, 40, 0.05), 6px 15px 24px -4px rgba(16, 24, 40, 0.05);
       }
     }
 
@@ -348,7 +355,7 @@ header {
   }
 
   .learn-more:is(.d-lg-none) div:has(span) {
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
   .its-img .d-flex {
